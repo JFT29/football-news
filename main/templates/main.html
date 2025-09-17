@@ -53,8 +53,6 @@
       </p>
 
       {% if news.thumbnail %}
-        {# If thumbnail is a static path like 'main/file.jpg', use the static tag below.
-           If it's a full URL, switch back to src="{{ news.thumbnail }}" #}
            <img
            src="{% if news.thumbnail|slice:':4' == 'http' %}{{ news.thumbnail }}{% else %}{% static news.thumbnail %}{% endif %}"
            alt="{{ news.title }} thumbnail"

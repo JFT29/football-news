@@ -44,9 +44,9 @@ def show_main(request):
     else:
         news_list = News.objects.filter(user=request.user)
     context = {
-        'npm': '240123456',
+        'npm': '2406365345',
         'name': request.user.username,
-        'class': 'PBP A',
+        'class': 'PBP KKI',
         'news_list': news_list,
         'last_login': request.COOKIES.get('last_login', 'Never')
     }
